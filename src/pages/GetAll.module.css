@@ -1,0 +1,27 @@
+li{
+    text-align: left;
+}
+
+button:hover{
+    background-color: darkgrey;
+}
+
+.updateBtn{
+    border: 1px solid rgb(109, 109, 109);
+    background-color: lightgrey;
+    position: absolute;
+    height: 18px;
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.deleteBtn{ /* delete en och en i cart */
+    border: 1px solid rgb(109, 109, 109);
+    background-color: lightgrey;
+    position: absolute;
+    height: 18px;
+    width: 60px;
+    margin-left: 80px;
+    margin-top: 2px; 
+}

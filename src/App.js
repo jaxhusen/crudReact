@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import GetOne from './pages/GetOne';
+import GetAll from "./pages/GetAll";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from './components/Header';
+import {useState} from 'react';
+import CreateOne from './pages/CreateOne';
+
+
 
 function App() {
+  /* const [empty, setEmpty] = useState([]) */
+
+/*   const addProduct = (newProduct) => {
+    const found = empty.find(empty => empty.id === newProduct.id)
+    if (found === undefined) {
+      setEmpty([
+        ...empty, //en i taget
+        newProduct
+      ]);
+    } else {
+      found.qty += newProduct.qty
+    }
+} */
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+ <BrowserRouter>
+    <Header />
+        <Routes>
+          <Route path="/" element={<GetOne />} />
+          <Route path="GetAll" element={<GetAll />} />
+          <Route path="CreateOne" element={<CreateOne />} />
+        </Routes>
+</BrowserRouter>
+      
+      
     </div>
   );
 }
